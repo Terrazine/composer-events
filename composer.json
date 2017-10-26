@@ -10,7 +10,9 @@
     }
   ],
   "require": {
-    "laravel/framework": "5.*"
+    "laravel/framework": "5.*",
+    "terrazine/artisan-forceascii": "^1.0",
+    "terrazine/artisan-commandheader": "^1.1"
   },
   "autoload": {
     "psr-4": {
