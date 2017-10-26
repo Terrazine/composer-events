@@ -1,0 +1,30 @@
+{
+  "name": "terrazine/composer-events",
+  "description": "Wraps some composer events to laravel.",
+  "type": "wrapper",
+  "license": "inherit",
+  "authors": [
+    {
+      "name": "Patrick 'Quezler' Mounier",
+      "email": "Quezler@me.com"
+    }
+  ],
+  "require": {
+    "laravel/framework": "5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Terrazine\\ComposerEvents\\": "src/"
+    }
+  },
+  "extra": {
+    "terrazine": {
+      "human": "@see terrazine/slayn"
+    },
+    "laravel": {
+      "providers": [
+        "Terrazine\\ComposerEvents\\TerrazineComposerEventsServiceProvider"
+      ]
+    }
+  }
+}
