@@ -32,18 +32,7 @@ class TerrazineComposerEventsServiceProvider extends ServiceProvider
             TerrazineComposerEventsPreAutoloadDumpCommand::class,
             TerrazineComposerEventsPostAutoloadDumpCommand::class,
         ]);
-
-//        Event::listen(PreAutoloadDump::class, function () {
-//            return function (InputInterface $input, OutputInterface $output){
-//                $output->writeln('senpai,');
-//            };
-//        });
-//
-//        Event::listen(PostAutoloadDump::class, function () {
-//            return function (InputInterface $input, OutputInterface $output){
-//                $output->writeln('notice me!');
-//            };
-//        });
+        
     }
 
     /**
