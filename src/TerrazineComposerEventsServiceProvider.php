@@ -32,7 +32,7 @@ class TerrazineComposerEventsServiceProvider extends ServiceProvider
             TerrazineComposerEventsPreAutoloadDumpCommand::class,
             TerrazineComposerEventsPostAutoloadDumpCommand::class,
         ]);
-        
+
     }
 
     /**
@@ -54,13 +54,13 @@ class TerrazineComposerEventsServiceProvider extends ServiceProvider
             $composer->scripts->{'post-autoload-dump'} = [];
         }
 
-        if (!in_array('@php artisan terrazine:composer-events:pre-autoload-dump || true', $composer->scripts->{'pre-autoload-dump'})) {
-            array_push($composer->scripts->{'pre-autoload-dump'}, '@php artisan terrazine:composer-events:pre-autoload-dump || true');
+        if (!in_array('php artisan terrazine:composer-events:pre-autoload-dump || true', $composer->scripts->{'pre-autoload-dump'})) {
+            array_push($composer->scripts->{'pre-autoload-dump'}, 'php artisan terrazine:composer-events:pre-autoload-dump || true');
             $changed = true;
         }
 
-        if (!in_array('@php artisan terrazine:composer-events:post-autoload-dump || true', $composer->scripts->{'post-autoload-dump'})) {
-            array_push($composer->scripts->{'post-autoload-dump'}, '@php artisan terrazine:composer-events:post-autoload-dump || true');
+        if (!in_array('php artisan terrazine:composer-events:post-autoload-dump || true', $composer->scripts->{'post-autoload-dump'})) {
+            array_push($composer->scripts->{'post-autoload-dump'}, 'php artisan terrazine:composer-events:post-autoload-dump || true');
             $changed = true;
         }
 
